@@ -7,7 +7,7 @@ function App() {
       App Components
     </h1>
     </>
-  );
+  )
 }
 
 export default App;
