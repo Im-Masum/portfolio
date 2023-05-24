@@ -1,25 +1,108 @@
 import React from 'react'
 
+import { motion } from 'framer-motion'
+import Typewriter from 'typewriter-effect'
 import masum from '../assets/profile1.jpg'
+import {FaLinkedin, FaGithub, FaArrowDown} from 'react-icons/fa'
+
+import html from '../assets/html.png'
+import css from '../assets/css.png'
+import js from '../assets/js.png'
+import sass from '../assets/sass.png'
+import react from '../assets/react.png'
+import hi from '../assets/hi.png'
 
 const Home = () => {
+  const motionAnimation = {
+    h1 : {
+      initial: {
+        x: "100%",
+        opacity: 0
+      },
+      whileInView: {
+        x: 0,
+        opacity: 1
+      }
+    },
+    div : {
+      initial: {
+        x: "-100%",
+        opacity: 0
+      },
+      whileInView: {
+        x: 0,
+        opacity: 1
+      }
+    },
+    p : {
+      initial: {
+        y: "-100%",
+        opacity: 0
+      },
+      whileInView: {
+        y: 0,
+        opacity: 1
+      },
+      transition: {
+        delay: 0.6
+      }
+    }
+  }
+  
   return (
     <>
-     <section id='home'>
-      <div className="text-content">
-        <span>Hi,</span>
-        <h1>I'm Front-End <br /> React Developer</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. aut quaerat modi veniam laudantium tempora Magnam aspernatur nesciunt labore dolor tempore aut quaerat modi veniam laudantium tempora?</p>
-        <a href="mailto: themasumhere@gmail.com" className='hire'>Hire Me</a>
-        <a href="#projects">Projects</a>
-      </div>
-
-      <div className="img-content">
-        <div className="img">
-          <img src={masum} alt="Masum_Photo" />
+     <div id='home'>
+      <section className='home_section'>
+        <div className="text-content">
+          <motion.h1 {...motionAnimation.h1}>
+            Front-End
+            <Typewriter options={{
+              strings: ['React Developer', 'Web Developer', 'NextJs Developer'],
+              loop: true,
+              autoStart: true,
+              cursor: '',
+              wrapperClassName: 'typewriter'
+            }} />
+          </motion.h1>
+          <motion.p {...motionAnimation.p}>
+            <h3 className='hi'>Hi,<img src={hi} alt="Hi" /></h3>
+            <p>I'm Masum Hossain. A passionate Front-end React Developer based in Dhaka, Bangladesh.</p>
+          </motion.p>
+          <div className="social-link">
+            <a href="https://www.linkedin.com/in/im-masum/" target='_blank' className='hire' rel="noreferrer"><FaLinkedin /></a>
+            <a href="https://github.com/Im-Masum" target='_blank' rel="noreferrer"><FaGithub /></a>
+          </div>
+          <motion.div {...motionAnimation.div} className="tech">
+            <h3>Tech Stack</h3>
+            <div className="tech-img">
+              <div className="img">
+                <img src={html} alt="HTML" />
+              </div>
+              <div className="img">
+              <img src={css} alt="CSS" />
+              </div>
+              <div className="img">
+                <img src={js} alt="Javascript" />
+              </div>
+              <div className="img">
+                <img src={sass} alt="Sass" />
+              </div>
+              <div className="img">
+                <img src={react} alt="React" />
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
-    </section>   
+
+        <div className="img-content">
+          <div className="img">
+            <img src={masum} title='Hi, My name is Masum' alt="Masum_Photo" />
+          </div>
+        </div>
+        
+        <a href="#about" className='arrow' title='Click Me'><FaArrowDown /></a>
+      </section>
+     </div>
     </>
   )
 }
