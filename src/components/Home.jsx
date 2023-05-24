@@ -66,7 +66,7 @@ const Home = () => {
           </motion.h1>
           <motion.p {...motionAnimation.p}>
             <h3 className='hi'>Hi,<img src={hi} alt="Hi" /></h3>
-            <p>I'm Masum Hossain. A passionate Front-end React Developer based in Dhaka, Bangladesh.</p>
+            <p>I'm Masum Hossain. A passionate Front-End React Developer based in Dhaka, Bangladesh.</p>
           </motion.p>
           <div className="social-link">
             <a href="https://www.linkedin.com/in/im-masum/" target='_blank' className='hire' rel="noreferrer"><FaLinkedin /></a>
@@ -74,23 +74,13 @@ const Home = () => {
           </div>
           <motion.div {...motionAnimation.div} className="tech">
             <h3>Tech Stack</h3>
-            <div className="tech-img">
-              <div className="img">
-                <img src={html} alt="HTML" />
-              </div>
-              <div className="img">
-              <img src={css} alt="CSS" />
-              </div>
-              <div className="img">
-                <img src={js} alt="Javascript" />
-              </div>
-              <div className="img">
-                <img src={sass} alt="Sass" />
-              </div>
-              <div className="img">
-                <img src={react} alt="React" />
-              </div>
-            </div>
+            <ul className="tech-img">
+              <li><img src={html} alt="HTML" /></li>
+              <li><img src={css} alt="CSS" /></li>
+              <li><img src={js} alt="Javascript" /></li>
+              <li><img src={sass} alt="Sass" /></li>
+              <li><img src={react} alt="React" /></li>
+            </ul>
           </motion.div>
         </div>
 

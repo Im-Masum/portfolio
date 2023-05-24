@@ -54,7 +54,7 @@
           font-size: 4rem;
 
           &:first-of-type {
-            color: #0a66c2;
+            color: #0482ff;
           }
 
           &:last-of-type {
@@ -70,26 +70,27 @@
         margin-top: 8rem;
 
         h3 {
-          flex-basis: 20%;
           color: $color-1;
           font-size: 2rem;
+          font-family: $font-2;
           border-right: 3px solid $bg-1;
+          padding-right: 3rem;
+          margin-right: 4rem;
         }
 
         .tech-img {
-          flex-basis: 80%;
           display: flex;
           align-items: center;
           flex-wrap: wrap;
-          padding-left: 4rem;
-          gap: 1rem;
+          gap: 1.5rem;
 
-          .img {
+          li {
+            list-style: none;
             width: 50px;
             height: 50px;
             padding: 1rem;
             border-radius: 50%;
-            background: $color-2;
+            box-shadow: 0px 5px 5px #333, 0px -5px 5px #333;
 
             img {
               width: 100%;

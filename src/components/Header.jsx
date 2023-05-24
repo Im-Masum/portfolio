@@ -7,7 +7,7 @@ const Header = () => {
       <div className="navLists">
           <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="#Projects">Projects</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
       </div>
       <a href="mailto: themasumhere@gmail.com">

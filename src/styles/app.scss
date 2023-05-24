@@ -6,6 +6,9 @@
 @import "home";
 @import "about";
 @import "mediaquery";
+@import "projects";
+@import "contact";
+@import "footer";
 
 * {
   margin: 0;
@@ -21,7 +24,7 @@ html {
 
 body {
   background: $bg-2;
-  color: #000;
+  color: $color-1;
   font-size: 1.6rem;
 }
 

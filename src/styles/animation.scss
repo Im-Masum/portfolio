@@ -45,3 +45,12 @@
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
+
+@keyframes formupdown {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
